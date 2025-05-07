@@ -6,11 +6,11 @@ export default function UpdateJob() {
   const { id } = useParams();
   useEffect(() => {
     getJob();
-  }, []);
+  });
 
   function getJob() {
     axios
-      .get(`http://localhost/ReactCRUD/index.php/${id}`)
+      .get(`http://localhost/assignmentBackend/index.php/${id}`)
       .then((response) => {
         console.log("Server Response:", response.data);
         setInputs(response.data);
@@ -32,7 +32,10 @@ export default function UpdateJob() {
     console.log("Data being sent:", inputs);
 
     axios
-      .patch(`http://localhost/ReactCRUD/index.php/${id}/update`, inputs)
+      .patch(
+        `http://localhost/assignmentBackend/index.php/${id}/update`,
+        inputs
+      )
       .then((response) => {
         console.log("Server Response:", response.data);
         navigate("/");

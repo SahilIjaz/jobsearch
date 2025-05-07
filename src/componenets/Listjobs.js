@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 export default function ListJobs() {
-  const [users, setUsers] = useState();
+  const [jobs, setJobs] = useState();
 
   useEffect(() => {
     getJobs();
@@ -10,10 +10,10 @@ export default function ListJobs() {
 
   function getJobs() {
     axios
-      .get("http://localhost/ReactCRUD/index.php")
+      .get("http://localhost/assignmentBackend/index.php")
       .then((response) => {
         console.log("Server Response:", response.data);
-        setUsers(response.data);
+        setJobs(response.data);
       })
       .catch((error) => {
         console.error("There was an error!", error);
@@ -22,7 +22,7 @@ export default function ListJobs() {
 
   const deleteUser = (id) => {
     axios
-      .delete(`http://localhost/ReactCRUD/index.php/${id}/delete`)
+      .delete(`http://localhost/assignmentBackend/index.php/${id}/delete`)
       .then(function (response) {
         console.log(response.data);
         getJobs();
@@ -34,28 +34,29 @@ export default function ListJobs() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Mobile</th>
-            <th>Actions</th>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Application Date</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
-          {Array.isArray(users) &&
-            users.map((user, key) => (
+          {Array.isArray(jobs) &&
+            jobs.map((job, key) => (
               <tr key={key}>
-                <td>{user.id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.mobile_no}</td>
+                <td>{job.id}</td>
+                <td>{job.jobTitle}</td>
+                <td>{job.company}</td>
+                <td>{job.applicationDate}</td>
+                <td>{job.status}</td>
                 <td>
                   <Link
-                    to={`job/${user.id}/update`}
+                    to={`job/${job.id}/update`}
                     style={{ marginRight: "13px" }}
                   >
                     Edit
                   </Link>
-                  <button onClick={() => deleteUser(user.id)}>Delete</button>
+                  <button onClick={() => deleteUser(job.id)}>Delete</button>
                 </td>
               </tr>
             ))}

@@ -9,13 +9,13 @@ export default function CreateJob() {
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
   };
-
+  //id, jobTitle, company, applicationDate, status
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Data being sent:", inputs);
 
     axios
-      .post("http://localhost/ReactCRUD/index.php", inputs)
+      .post("http://localhost/assignmentBackend/index.php", inputs)
       .then((response) => {
         console.log("Server Response:", response.data);
         navigate("/");
@@ -34,28 +34,28 @@ export default function CreateJob() {
           <tbody>
             <tr>
               <th>
-                <label>Name:</label>
+                <label>Job Title:</label>
               </th>
               <td>
-                <input type="text" name="name" onChange={handleChange} />
+                <input type="text" name="jobTitle" onChange={handleChange} />
               </td>
             </tr>
 
             <tr>
               <th>
-                <label>Email:</label>
+                <label>Company:</label>
               </th>
               <td>
-                <input type="text" name="email" onChange={handleChange} />
+                <input type="text" name="company" onChange={handleChange} />
               </td>
             </tr>
 
             <tr>
               <th>
-                <label>Mobile:</label>
+                <label>Status:</label>
               </th>
               <td>
-                <input type="text" name="mobile_no" onChange={handleChange} />
+                <input type="text" name="status" onChange={handleChange} />
               </td>
             </tr>
 
