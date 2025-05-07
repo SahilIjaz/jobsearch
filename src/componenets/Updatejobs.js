@@ -6,7 +6,7 @@ export default function UpdateJob() {
   const { id } = useParams();
   useEffect(() => {
     getJob();
-  });
+  }, [id]);
 
   function getJob() {
     axios
