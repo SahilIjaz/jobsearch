@@ -104,7 +104,7 @@ export default function UpdateJob() {
     //   </form>
     // </div>
     <div className="create-job">
-      <h1>Create Job</h1>
+      <h1>Update Job</h1>
       <form onSubmit={handleSubmit}>
         <table cellSpacing={"10"}>
           <tbody>
