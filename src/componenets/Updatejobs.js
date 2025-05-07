@@ -47,50 +47,102 @@ export default function UpdateJob() {
   };
 
   return (
+    // <div className="create-job">
+    //   <h1>Update USer</h1>
+    //   <form onSubmit={handleSubmit}>
+    //     <table cellSpacing={"10"}>
+    //       <tbody>
+    //         <tr>
+    //           <th>
+    //             <label>Name:</label>
+    //           </th>
+    //           <td>
+    //             <input
+    //               value={inputs.name}
+    //               type="text"
+    //               name="name"
+    //               onChange={handleChange}
+    //             />
+    //           </td>
+    //         </tr>
+
+    //         <tr>
+    //           <th>
+    //             <label>Email:</label>
+    //           </th>
+    //           <td>
+    //             <input
+    //               value={inputs.email}
+    //               type="text"
+    //               name="email"
+    //               onChange={handleChange}
+    //             />
+    //           </td>
+    //         </tr>
+
+    //         <tr>
+    //           <th>
+    //             <label>Mobile:</label>
+    //           </th>
+    //           <td>
+    //             <input
+    //               value={inputs.mobile_no}
+    //               type="text"
+    //               name="mobile_no"
+    //               onChange={handleChange}
+    //             />
+    //           </td>
+    //         </tr>
+
+    //         <tr>
+    //           <td colSpan={"2"} align="right">
+    //             <button>Save</button>
+    //           </td>
+    //         </tr>
+    //       </tbody>
+    //     </table>
+    //   </form>
+    // </div>
     <div className="create-job">
-      <h1>Update USer</h1>
+      <h1>Create Job</h1>
       <form onSubmit={handleSubmit}>
         <table cellSpacing={"10"}>
           <tbody>
             <tr>
               <th>
-                <label>Name:</label>
+                <label>Job Title:</label>
               </th>
               <td>
-                <input
-                  value={inputs.name}
-                  type="text"
-                  name="name"
-                  onChange={handleChange}
-                />
+                <input type="text" name="jobTitle" onChange={handleChange} />
               </td>
             </tr>
 
             <tr>
               <th>
-                <label>Email:</label>
+                <label>Company:</label>
+              </th>
+              <td>
+                <input type="text" name="company" onChange={handleChange} />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>Valid till:</label>
               </th>
               <td>
                 <input
-                  value={inputs.email}
-                  type="text"
-                  name="email"
+                  type="date"
+                  name="applicationDate"
                   onChange={handleChange}
                 />
               </td>
             </tr>
-
             <tr>
               <th>
-                <label>Mobile:</label>
+                <label>Status:</label>
               </th>
               <td>
-                <input
-                  value={inputs.mobile_no}
-                  type="text"
-                  name="mobile_no"
-                  onChange={handleChange}
-                />
+                <input type="text" name="status" onChange={handleChange} />
               </td>
             </tr>
 

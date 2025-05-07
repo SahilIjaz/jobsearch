@@ -9,7 +9,7 @@ export default function CreateJob() {
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
   };
-  //id, jobTitle, company, applicationDate, status
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Data being sent:", inputs);
@@ -49,7 +49,18 @@ export default function CreateJob() {
                 <input type="text" name="company" onChange={handleChange} />
               </td>
             </tr>
-
+            <tr>
+              <th>
+                <label>Valid till:</label>
+              </th>
+              <td>
+                <input
+                  type="date"
+                  name="applicationDate"
+                  onChange={handleChange}
+                />
+              </td>
+            </tr>
             <tr>
               <th>
                 <label>Status:</label>
