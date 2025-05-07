@@ -47,62 +47,6 @@ export default function UpdateJob() {
   };
 
   return (
-    // <div className="create-job">
-    //   <h1>Update USer</h1>
-    //   <form onSubmit={handleSubmit}>
-    //     <table cellSpacing={"10"}>
-    //       <tbody>
-    //         <tr>
-    //           <th>
-    //             <label>Name:</label>
-    //           </th>
-    //           <td>
-    //             <input
-    //               value={inputs.name}
-    //               type="text"
-    //               name="name"
-    //               onChange={handleChange}
-    //             />
-    //           </td>
-    //         </tr>
-
-    //         <tr>
-    //           <th>
-    //             <label>Email:</label>
-    //           </th>
-    //           <td>
-    //             <input
-    //               value={inputs.email}
-    //               type="text"
-    //               name="email"
-    //               onChange={handleChange}
-    //             />
-    //           </td>
-    //         </tr>
-
-    //         <tr>
-    //           <th>
-    //             <label>Mobile:</label>
-    //           </th>
-    //           <td>
-    //             <input
-    //               value={inputs.mobile_no}
-    //               type="text"
-    //               name="mobile_no"
-    //               onChange={handleChange}
-    //             />
-    //           </td>
-    //         </tr>
-
-    //         <tr>
-    //           <td colSpan={"2"} align="right">
-    //             <button>Save</button>
-    //           </td>
-    //         </tr>
-    //       </tbody>
-    //     </table>
-    //   </form>
-    // </div>
     <div className="create-job">
       <h1>Update Job</h1>
       <form onSubmit={handleSubmit}>
