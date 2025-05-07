@@ -58,7 +58,7 @@ export default function UpdateJob() {
               </th>
               <td>
                 <input
-                  value={inputs.name}
+                  value={inputs.jobTitle || ""}
                   type="text"
                   name="jobTitle"
                   onChange={handleChange}
@@ -72,7 +72,7 @@ export default function UpdateJob() {
               </th>
               <td>
                 <input
-                  value={inputs.name}
+                  value={inputs.company || ""}
                   type="text"
                   name="company"
                   onChange={handleChange}
@@ -85,7 +85,7 @@ export default function UpdateJob() {
               </th>
               <td>
                 <input
-                  value={inputs.name}
+                  value={inputs.applicationDate || ""}
                   type="date"
                   name="applicationDate"
                   onChange={handleChange}
@@ -98,7 +98,7 @@ export default function UpdateJob() {
               </th>
               <td>
                 <input
-                  value={inputs.name}
+                  value={inputs.status || ""}
                   type="text"
                   name="status"
                   onChange={handleChange}
