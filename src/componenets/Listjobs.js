@@ -13,7 +13,7 @@ export default function ListJobs() {
       .get("http://localhost/assignmentBackend/index.php")
       .then((response) => {
         console.log("Server Response:", response.data);
-        setJobs(response.data);
+        setJobs(response.data.data);
       })
       .catch((error) => {
         console.error("There was an error!", error);
@@ -24,7 +24,7 @@ export default function ListJobs() {
     axios
       .delete(`http://localhost/assignmentBackend/index.php/${id}/delete`)
       .then(function (response) {
-        console.log(response.data);
+        console.log(response.data.data);
         getJobs();
       });
   };

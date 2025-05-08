@@ -13,7 +13,7 @@ export default function UpdateJob() {
       .get(`http://localhost/assignmentBackend/index.php/${id}`)
       .then((response) => {
         console.log("Server Response:", response.data);
-        setInputs(response.data);
+        setInputs(response.data.data);
       })
       .catch((error) => {
         console.error("There was an error!", error);
